@@ -26,6 +26,7 @@ async function showIndependent() {
     let result = await allCountries.json();
     let indptCountries = result.filter((country) => country.independent == true);
     console.log(indptCountries);
+    display.innerHTML = "";
     indptCountries.forEach((element, index) => {
         display.innerHTML += `
          <tr class="">
@@ -45,6 +46,7 @@ async function showNonIndependent() {
     let result = await allCountries.json();
     let nonIndptCountries = result.filter((country) => country.independent == false);
     console.log(nonIndptCountries);
+    display.innerHTML = "";
     nonIndptCountries.forEach((element, index) => {
         display.innerHTML += `
          <tr class="">
