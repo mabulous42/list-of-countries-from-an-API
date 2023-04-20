@@ -12,7 +12,7 @@ async function displayCountries() {
             <td>${element.name.common}</td>
             <td>${element.capital}</td>
             <td>${element.population}</td>
-            <td>${Object.values(element.languages).join(", ")}</td>
+            <td>${JSON.stringify(element.languages)}</td>
             <td>${element.independent}</td>
          </tr>
          `
@@ -34,7 +34,7 @@ async function showIndependent() {
             <td>${element.name.common}</td>
             <td>${element.capital}</td>
             <td>${element.population}</td>
-            <td>${Object.values(element.languages).join(", ")}</td>
+            <td>${JSON.stringify(element.languages)}</td>
             <td>${element.independent}</td>
          </tr>
          `
@@ -54,7 +54,7 @@ async function showNonIndependent() {
             <td>${element.name.common}</td>
             <td>${element.capital}</td>
             <td>${element.population}</td>
-            <td>${Object.values(element.languages).join(", ")}</td>
+            <td>${JSON.stringify(element.languages)}</td>
             <td>${element.independent}</td>
          </tr>
          `
