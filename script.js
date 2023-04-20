@@ -1,4 +1,8 @@
 let display = document.getElementById("display");
+// let fetchedCounties = [];
+// fetchedCounties = fetch("https://restcountries.com/v3.1/all");
+// let answer = fetchedCounties.json();
+// console.log(answer);
 
 
 async function displayCountries() {
@@ -12,7 +16,7 @@ async function displayCountries() {
             <td>${element.name.common}</td>
             <td>${element.capital}</td>
             <td>${element.population}</td>
-            <td>${JSON.stringify(element.languages)}</td>
+            <td>${!element.languages? "Mute": Object.values((element.languages)).join(", ")}</td>
             <td>${element.independent}</td>
          </tr>
          `
@@ -34,7 +38,7 @@ async function showIndependent() {
             <td>${element.name.common}</td>
             <td>${element.capital}</td>
             <td>${element.population}</td>
-            <td>${JSON.stringify(element.languages)}</td>
+            <td>${Object.values((element.languages)).join(", ")}</td>
             <td>${element.independent}</td>
          </tr>
          `
@@ -54,7 +58,7 @@ async function showNonIndependent() {
             <td>${element.name.common}</td>
             <td>${element.capital}</td>
             <td>${element.population}</td>
-            <td>${JSON.stringify(element.languages)}</td>
+            <td>${Object.values((element.languages)).join(", ")}</td>
             <td>${element.independent}</td>
          </tr>
          `
